@@ -4,4 +4,7 @@
     <select id="findById" resultType="com.example.demo.entity.UserEntity">
         SELECT * FROM user WHERE id = #{id}
     </select>
+    <insert id="save" parameterType="com.example.demo.entity.UserEntity">
+        INSERT  INTO  user(user_name,age) values(#{userName},#{age});
+    </insert>
 </mapper>

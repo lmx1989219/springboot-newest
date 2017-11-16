@@ -46,7 +46,13 @@ public class UserService {
     }
 
     @Transactional
-    public UserEntity getById(long id){
-        return  userMapper.findById(id);
+    public UserEntity getById(long id) {
+        return userMapper.findById(id);
     }
+
+    @Transactional
+    public void saveUser(UserEntity userEntity) {
+        userMapper.save(userEntity);
+    }
+
 }

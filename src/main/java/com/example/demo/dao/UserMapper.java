@@ -12,4 +12,6 @@ public interface UserMapper {
 
     UserEntity findById(@Param("id") long id);
 
+    void save(UserEntity userEntity);
+
 }
